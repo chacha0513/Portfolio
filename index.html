@@ -127,7 +127,7 @@ img { max-width: 100%; display: block; }
   background: var(--chalk);
   border-radius: 50%;
   position: fixed; top: 0; left: 0;
-  pointer-events: none;
+  pointer-events: none !important;
   z-index: 9999;
   transform: translate(-50%, -50%);
   transition: background 0.2s;
@@ -137,7 +137,7 @@ img { max-width: 100%; display: block; }
   border: 1px solid rgba(240,237,230,0.5);
   border-radius: 50%;
   position: fixed; top: 0; left: 0;
-  pointer-events: none;
+  pointer-events: none !important;
   z-index: 9998;
   transform: translate(-50%, -50%);
   transition: width 0.3s ease, height 0.3s ease, background 0.3s ease, border-color 0.3s ease;
@@ -1547,18 +1547,19 @@ body, input, textarea, button, select {
   position: fixed;
   bottom: 32px;
   right: 32px;
-  z-index: 400;
+  z-index: 99999;
   width: 52px;
   height: 52px;
   border-radius: 50%;
   background: linear-gradient(135deg, #f472b6, #c4b5fd);
   border: none;
-  cursor: pointer;
+  cursor: pointer !important;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 24px rgba(244,114,182,0.4);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  pointer-events: all !important;
 }
 .share-btn:hover {
   transform: scale(1.1) translateY(-2px);
@@ -1571,7 +1572,7 @@ body, input, textarea, button, select {
   position: fixed;
   bottom: 96px;
   right: 32px;
-  z-index: 400;
+  z-index: 99999;
   background: var(--panel);
   border: 1px solid var(--panel-border);
   border-radius: 4px;
@@ -1606,13 +1607,14 @@ body, input, textarea, button, select {
   font-family: var(--font-body);
   font-size: 13px;
   color: var(--chalk);
-  cursor: pointer;
+  cursor: pointer !important;
   transition: background 0.15s ease;
   border: none;
   background: none;
   width: 100%;
   text-align: left;
   text-decoration: none;
+  pointer-events: all !important;
 }
 .share-option:hover { background: rgba(244,114,182,0.06); color: var(--amber); }
 .share-option svg { flex-shrink: 0; opacity: 0.7; }
@@ -1622,7 +1624,7 @@ body, input, textarea, button, select {
   position: fixed;
   bottom: 96px;
   right: 32px;
-  z-index: 401;
+  z-index: 99999;
   background: linear-gradient(135deg, #f472b6, #c4b5fd);
   color: var(--ink);
   font-family: var(--font-mono);
@@ -1647,6 +1649,24 @@ body, input, textarea, button, select {
   .share-btn { bottom: 24px; right: 20px; width: 48px; height: 48px; }
   .share-toast { right: 20px; bottom: 84px; }
   .copied-badge { right: 20px; bottom: 84px; }
+}
+
+
+/* SHARE BUTTON CLICK FIX */
+#share-btn,
+#share-toast,
+#share-toast *,
+#copy-link-btn,
+#copied-badge {
+  cursor: pointer !important;
+  pointer-events: all !important;
+  position: relative;
+  z-index: 99999;
+}
+/* Ensure cursor elements NEVER block clicks */
+#cursor-dot, #cursor-ring {
+  pointer-events: none !important;
+  user-select: none !important;
 }
 
 </style>
