@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Charlene Mae Galang — Revenue Manager & Market Analyst</title>
+<title>Charlene Mae Galang — Pricing Analyst · Revenue Manager · Market Analyst</title>
 
 <!-- SEO Meta -->
-<meta name="description" content="Charlene Mae Galang is a Revenue Manager and Market Analyst with 9+ years of experience in yield management, pricing strategy, and demand forecasting across aviation and live events industries.">
+<meta name="description" content="Charlene Mae Galang is a Pricing Analyst, Revenue Manager and Market Analyst with 9+ years of experience in yield management, pricing strategy, and demand forecasting across aviation and live events industries.">
 <meta name="keywords" content="Charlene Mae Galang, Revenue Manager, Market Analyst, Pricing Analyst, Yield Management, Philippine Airlines, Reps and Co, Demand Forecasting, Philippines">
 <meta name="author" content="Charlene Mae Galang">
 <meta name="robots" content="index, follow">
@@ -15,7 +15,7 @@
 <!-- Open Graph (LinkedIn, Facebook, WhatsApp previews) -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://chacha0513.github.io/portfolio/">
-<meta property="og:title" content="Charlene Mae Galang — Revenue Manager & Market Analyst">
+<meta property="og:title" content="Charlene Mae Galang — Pricing Analyst, Revenue Manager & Market Analyst">
 <meta property="og:description" content="9+ years reading markets before they move. From airline seat inventory to concert ticket portfolios — pricing intelligence, for hire.">
 <meta property="og:image" content="https://chacha0513.github.io/portfolio/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -26,7 +26,7 @@
 <!-- Twitter / X Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://chacha0513.github.io/portfolio/">
-<meta name="twitter:title" content="Charlene Mae Galang — Revenue Manager & Market Analyst">
+<meta name="twitter:title" content="Charlene Mae Galang — Pricing Analyst, Revenue Manager & Market Analyst">
 <meta name="twitter:description" content="9+ years reading markets before they move. From airline seat inventory to concert ticket portfolios — pricing intelligence, for hire.">
 <meta name="twitter:image" content="https://chacha0513.github.io/portfolio/og-image.jpg">
 
@@ -44,7 +44,7 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Charlene Mae Galang",
-  "jobTitle": "Revenue Manager & Market Analyst",
+  "jobTitle": "Pricing Analyst, Revenue Manager & Market Analyst",
   "url": "https://chacha0513.github.io/portfolio/",
   "email": "chagalang13@gmail.com",
   "telephone": "+639453168618",
@@ -112,7 +112,7 @@ body {
   color: var(--chalk);
   font-family: var(--font-body);
   line-height: 1.6;
-  cursor: none;
+  
   overflow-x: hidden;
 }
 body.loading { overflow: hidden; }
@@ -122,35 +122,10 @@ img { max-width: 100%; display: block; }
 /* =============================================
    CUSTOM CURSOR
    ============================================= */
-#cursor-dot {
-  width: 6px; height: 6px;
-  background: var(--chalk);
-  border-radius: 50%;
-  position: fixed; top: 0; left: 0;
-  pointer-events: none !important;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: background 0.2s;
-}
-#cursor-ring {
-  width: 36px; height: 36px;
-  border: 1px solid rgba(240,237,230,0.5);
-  border-radius: 50%;
-  position: fixed; top: 0; left: 0;
-  pointer-events: none !important;
-  z-index: 9998;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s ease, height 0.3s ease, background 0.3s ease, border-color 0.3s ease;
-}
-#cursor-ring.hovered {
-  width: 56px; height: 56px;
-  background: rgba(196,181,253,0.1);
-  border-color: var(--lilac);
-}
-#cursor-ring.clicked {
-  width: 24px; height: 24px;
-  background: rgba(244,114,182,0.2);
-}
+
+
+
+
 
 /* =============================================
    NOISE TEXTURE OVERLAY
@@ -1091,7 +1066,6 @@ footer {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
-  #cursor-dot, #cursor-ring { display: none; }
   body { cursor: auto; }
 }
 
@@ -1160,7 +1134,7 @@ footer {
   border: none;
   padding: 16px 28px;
   border-radius: 2px;
-  cursor: none;
+  
   transition: background 0.2s, gap 0.2s, opacity 0.2s;
 }
 .form-submit:hover { background: var(--amber); gap: 16px; }
@@ -1540,133 +1514,20 @@ body, input, textarea, button, select {
 }
 
 
-/* =============================================
-   SHARE BUTTON
-   ============================================= */
-.share-btn {
-  position: fixed;
-  bottom: 32px;
-  right: 32px;
-  z-index: 99999;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #f472b6, #c4b5fd);
-  border: none;
-  cursor: pointer !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 24px rgba(244,114,182,0.4);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  pointer-events: all !important;
-}
-.share-btn:hover {
-  transform: scale(1.1) translateY(-2px);
-  box-shadow: 0 8px 32px rgba(244,114,182,0.6);
-}
-.share-btn svg { color: var(--ink); }
 
-/* Share toast */
-.share-toast {
-  position: fixed;
-  bottom: 96px;
-  right: 32px;
-  z-index: 99999;
-  background: var(--panel);
-  border: 1px solid var(--panel-border);
-  border-radius: 4px;
-  padding: 0;
-  min-width: 220px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
-  overflow: hidden;
-}
-.share-toast.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-.share-toast-title {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--chalk-dim);
-  padding: 12px 16px 8px;
-  border-bottom: 1px solid var(--panel-border);
-}
-.share-option {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 16px;
-  font-family: var(--font-body);
-  font-size: 13px;
-  color: var(--chalk);
-  cursor: pointer !important;
-  transition: background 0.15s ease;
-  border: none;
-  background: none;
-  width: 100%;
-  text-align: left;
-  text-decoration: none;
-  pointer-events: all !important;
-}
-.share-option:hover { background: rgba(244,114,182,0.06); color: var(--amber); }
-.share-option svg { flex-shrink: 0; opacity: 0.7; }
+
+
+
+
+
+
+
 
 /* Copied feedback */
-.copied-badge {
-  position: fixed;
-  bottom: 96px;
-  right: 32px;
-  z-index: 99999;
-  background: linear-gradient(135deg, #f472b6, #c4b5fd);
-  color: var(--ink);
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-weight: 700;
-  padding: 10px 18px;
-  border-radius: 4px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(6px);
-  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
-}
-.copied-badge.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-@media (max-width: 600px) {
-  .share-btn { bottom: 24px; right: 20px; width: 48px; height: 48px; }
-  .share-toast { right: 20px; bottom: 84px; }
-  .copied-badge { right: 20px; bottom: 84px; }
-}
 
 
-/* SHARE BUTTON CLICK FIX */
-#share-btn,
-#share-toast,
-#share-toast *,
-#copy-link-btn,
-#copied-badge {
-  cursor: pointer !important;
-  pointer-events: all !important;
-  position: relative;
-  z-index: 99999;
-}
-/* Ensure cursor elements NEVER block clicks */
-#cursor-dot, #cursor-ring {
-  pointer-events: none !important;
-  user-select: none !important;
+
+
 }
 
 </style>
@@ -1676,8 +1537,6 @@ body, input, textarea, button, select {
 <body class="loading">
 
 <!-- ===== CUSTOM CURSOR ===== -->
-<div id="cursor-dot"></div>
-<div id="cursor-ring"></div>
 
 <!-- ===== LOADING SCREEN ===== -->
 <div id="loader">
@@ -1738,7 +1597,7 @@ body, input, textarea, button, select {
     </h1>
     <div class="hero-meta">
       <p class="hero-bio">
-        <strong>Charlene Mae Galang</strong> — Revenue Manager &amp; Market Analyst with
+        <strong>Charlene Mae Galang</strong> — Pricing Analyst, Revenue Manager &amp; Market Analyst with
         <strong>9+ years</strong> reading markets before they move. From airline seat
         inventory to concert ticket portfolios, the job is always the same: find the number.
       </p>
@@ -1773,6 +1632,7 @@ body, input, textarea, button, select {
   <div class="marquee-track" id="marquee">
     <div class="marquee-item"><span class="marquee-dot"></span>Yield Management</div>
     <div class="marquee-item"><span class="marquee-dot"></span>Revenue Strategy</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>Pricing Analyst</div>
     <div class="marquee-item"><span class="marquee-dot"></span>Market Analysis</div>
     <div class="marquee-item"><span class="marquee-dot"></span>Pricing Intelligence</div>
     <div class="marquee-item"><span class="marquee-dot"></span>Demand Forecasting</div>
@@ -1782,6 +1642,7 @@ body, input, textarea, button, select {
     <div class="marquee-item"><span class="marquee-dot"></span>Data Science</div>
     <div class="marquee-item"><span class="marquee-dot"></span>Yield Management</div>
     <div class="marquee-item"><span class="marquee-dot"></span>Revenue Strategy</div>
+    <div class="marquee-item"><span class="marquee-dot"></span>Pricing Analyst</div>
     <div class="marquee-item"><span class="marquee-dot"></span>Market Analysis</div>
     <div class="marquee-item"><span class="marquee-dot"></span>Pricing Intelligence</div>
     <div class="marquee-item"><span class="marquee-dot"></span>Demand Forecasting</div>
@@ -1831,7 +1692,7 @@ body, input, textarea, button, select {
           </div>
         </div>
         <p class="about-bio">
-          Charlene has spent over nine years finding the number where supply, demand, and timing meet. She started by balancing seat inventory and fares as a <strong>Yield Management Specialist at Philippine Airlines</strong>, then moved into sourcing and pricing concert tickets at <strong>Reps and Co</strong>, where she now works as a Market Analyst. Her toolkit runs from Python and SQL to plain market instinct — but the job has always been the same: <strong>read the market before it moves, then price for it.</strong>
+          <strong>Charlene Mae Galang doesn't guess. She reads data.</strong><br><br>From her first day managing fares across 50+ <strong>Philippine Airlines</strong> routes to pricing over 1,000 live events at <strong>Reps and Co</strong> — every decision has been backed by data, timed by instinct, and measured by results. She built her foundation in the mathematics of optimization at the University of the Philippines, then spent nine years applying it where it actually matters: in markets that move fast and punish hesitation.<br><br>Along the way she became the kind of manager her team didn't want to leave — leading 10+ analysts through the pressure of a highly competitive pricing environment while making sure every person felt safe to learn, ask, and grow.<br><br>The tools change. The markets change. The inventory changes. <strong>The discipline never does: find the signal before the market moves, then price for it.</strong>
         </p>
       </div>
       <div class="id-card reveal reveal-delay-2">
@@ -1863,9 +1724,9 @@ body, input, textarea, button, select {
     <div class="section-header reveal">
       <div>
         <div class="section-num">02 — Experience</div>
-        <h2 class="section-title">Three Legs<br>Flown</h2>
+        <h2 class="section-title">Four Legs<br>Flown</h2>
       </div>
-      <p class="section-sub">A route built on data, instinct, and relentless market reading.</p>
+      <p class="section-sub">Four roles. One direction. Always finding the number.</p>
     </div>
     <div class="timeline">
       <div class="leg">
@@ -1876,29 +1737,40 @@ body, input, textarea, button, select {
         <div class="leg-card">
           <div class="leg-role">Yield Management Specialist</div>
           <div class="leg-org"><a href="https://www.philippineairlines.com/ph/en/home.html" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;">Philippine Airlines</a></div>
-          <p class="leg-desc">Balanced seat inventory against booking trends and demand forecasts, adjusting fares so load factors and margins moved in the same direction across every flight.</p>
+          <p class="leg-desc">Managed fare strategy across 50+ international and domestic routes using Amadeus, PROS, and Sabre — driving measurable revenue growth on high-priority China routes including Xiamen, Jinjiang, Shanghai, and Beijing. Balanced seat inventory against booking curves and demand forecasts to keep load factors and margins moving in the same direction.</p>
         </div>
       </div>
       <div class="leg">
         <div class="leg-meta">
-          <div class="leg-period">2021<br>– 2024</div>
+          <div class="leg-period">2021<br>– 2023</div>
           <div class="leg-num">LEG 02</div>
         </div>
         <div class="leg-card">
-          <div class="leg-role">Pricing Analyst → Revenue Manager</div>
+          <div class="leg-role">Pricing Analyst</div>
           <div class="leg-org"><a href="https://www.repsandcompany.com/" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;">Reps and Co</a></div>
-          <p class="leg-desc">Grew into ownership of company-wide pricing strategy: forecasting demand, tracking performance, and aligning revenue streams with the wider business.</p>
+          <p class="leg-desc">Maximized profit and minimized unsold inventory across a live event ticket portfolio by identifying peak performance windows and acting on them decisively. Used primary and secondary market data — Ticketmaster, StubHub, SeatGeek, DataIQ — to read demand signals early, price competitively, and reduce losses on underperforming positions before it was too late.</p>
+        </div>
+      </div>
+      <div class="leg">
+        <div class="leg-meta">
+          <div class="leg-period">2023<br>– 2024</div>
+          <div class="leg-num">LEG 03</div>
+        </div>
+        <div class="leg-card">
+          <div class="leg-role">Revenue Manager</div>
+          <div class="leg-org"><a href="https://www.repsandcompany.com/" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;">Reps and Co</a></div>
+          <p class="leg-desc">Led a team of 10+ Pricing Analysts to consistent revenue growth quarter on quarter — through rigorous demand forecasting, competitive pricing models, and cross-departmental strategy. Built a culture of open learning and psychological safety that became a key driver of team retention; team members credit this environment as the reason they stayed and grew. Developed analysts who could independently own their portfolios and deliver results.</p>
         </div>
       </div>
       <div class="leg">
         <div class="leg-meta">
           <div class="leg-period">2024<br>– Now</div>
-          <div class="leg-num">LEG 03</div>
+          <div class="leg-num">LEG 04</div>
         </div>
         <div class="leg-card">
           <div class="leg-role">Market Analyst</div>
           <div class="leg-org"><a href="https://www.repsandcompany.com/" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;">Reps and Co</a></div>
-          <p class="leg-desc">Sources and secures concert tickets by reading artist popularity and sales signals, then manages each portfolio from purchase through event day.</p>
+          <p class="leg-desc">Identifies high-profit live event opportunities across the primary and secondary ticket market — sourcing, evaluating, and securing inventory based on artist momentum, demand signals, and historical sales data. Draws on all available market intelligence to time entries and exits for maximum return, with a track record of 1,000+ events priced and $50M+ in revenue managed across the portfolio.</p>
         </div>
       </div>
     </div>
@@ -1936,14 +1808,14 @@ body, input, textarea, button, select {
       </div>
       <div class="skill-card">
         <svg class="skill-icon" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="19" stroke="#333a45" stroke-width="2.5"/><path d="M5 28 A19 19 0 0 1 39 28" stroke="#f472b6" stroke-width="2.5" stroke-linecap="round"/><line x1="22" y1="22" x2="32" y2="12" stroke="#f0ede6" stroke-width="2" stroke-linecap="round"/><circle cx="22" cy="22" r="2.5" fill="#f0ede6"/></svg>
-        <div class="skill-name">Data Decisions</div>
-        <p class="skill-desc">Letting booking and sales data — not gut feel — steer every pricing call.</p>
+        <div class="skill-name">Market Platforms</div>
+        <p class="skill-desc">Ticketmaster · StubHub · SeatGeek · DataIQ — reading primary and secondary market signals across all major platforms.</p>
         <div class="skill-index">03/06</div>
       </div>
       <div class="skill-card">
         <svg class="skill-icon" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="19" stroke="#333a45" stroke-width="2.5"/><path d="M5 28 A19 19 0 0 1 39 28" stroke="#2dd9c5" stroke-width="2.5" stroke-linecap="round"/><line x1="22" y1="22" x2="32" y2="12" stroke="#f0ede6" stroke-width="2" stroke-linecap="round"/><circle cx="22" cy="22" r="2.5" fill="#f0ede6"/></svg>
-        <div class="skill-name">Analytical Mind</div>
-        <p class="skill-desc">An MS in Applied Math that breaks pricing problems down to first principles.</p>
+        <div class="skill-name">Tech Stack</div>
+        <p class="skill-desc">Python · SQL · Hex · Tableau · Power BI · Airtable · Amadeus · PROS · Sabre — full-stack analyst toolkit.</p>
         <div class="skill-index">04/06</div>
       </div>
       <div class="skill-card">
@@ -2002,7 +1874,7 @@ body, input, textarea, button, select {
       <div class="reveal">
         <div class="section-num" style="margin-bottom: 20px;">05 — Contact</div>
         <h2 class="connect-headline">Let&#39;s<br>Talk<br>Numbers.</h2>
-        <p class="connect-sub">For collaborations, opportunities, or just to talk pricing and market trends — the door is open.</p>
+        <p class="connect-sub">Open to full-time and contract opportunities — remote or on-site, Philippines-based or global. For collaborations, opportunities, or just to talk pricing and market trends — the door is open.</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px;">
           <a href="https://raw.githubusercontent.com/chacha0513/portfolio/main/Charlene%20Mae%20Galang%20CV.pdf" target="_blank" download="Charlene Mae Galang CV.pdf" class="connect-cta">Download CV ↓</a>
           <a href="https://www.linkedin.com/in/charlene-mae-galang-02054b115/" target="_blank" rel="noopener" class="connect-cta-outline">View LinkedIn ↗</a>
@@ -2123,38 +1995,7 @@ body, input, textarea, button, select {
 /* =============================================
    CUSTOM CURSOR
    ============================================= */
-(function(){
-  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  
-  var dot = document.getElementById('cursor-dot');
-  var ring = document.getElementById('cursor-ring');
-  var ringX = 0, ringY = 0;
-  var dotX = 0, dotY = 0;
 
-  document.addEventListener('mousemove', function(e){
-    dotX = e.clientX;
-    dotY = e.clientY;
-    dot.style.left = dotX + 'px';
-    dot.style.top = dotY + 'px';
-  });
-
-  function animateRing(){
-    ringX += (dotX - ringX) * 0.12;
-    ringY += (dotY - ringY) * 0.12;
-    ring.style.left = ringX + 'px';
-    ring.style.top = ringY + 'px';
-    requestAnimationFrame(animateRing);
-  }
-  animateRing();
-
-  document.querySelectorAll('a, button, .skill-card, .leg-card, .cred-item').forEach(function(el){
-    el.addEventListener('mouseenter', function(){ ring.classList.add('hovered'); });
-    el.addEventListener('mouseleave', function(){ ring.classList.remove('hovered'); });
-  });
-
-  document.addEventListener('mousedown', function(){ ring.classList.add('clicked'); });
-  document.addEventListener('mouseup', function(){ ring.classList.remove('clicked'); });
-})();
 
 /* =============================================
    NAV SCROLL STATE
@@ -2232,63 +2073,6 @@ body, input, textarea, button, select {
    FLAP BOARD ANIMATION (hero fallback name)
    ============================================= */
 /* No longer needed — hero uses clean display type */
-
-/* =============================================
-   SHARE BUTTON
-   ============================================= */
-(function(){
-  var btn    = document.getElementById('share-btn');
-  var toast  = document.getElementById('share-toast');
-  var copyBtn = document.getElementById('copy-link-btn');
-  var badge  = document.getElementById('copied-badge');
-  if (!btn || !toast) return;
-
-  var url = 'https://chacha0513.github.io/portfolio/';
-
-  // Toggle toast
-  btn.addEventListener('click', function(e) {
-    e.stopPropagation();
-    // Try native share first (mobile)
-    if (navigator.share) {
-      navigator.share({
-        title: 'Charlene Mae Galang — Revenue Manager & Market Analyst',
-        text: '9+ years reading markets before they move. Pricing intelligence, for hire.',
-        url: url
-      });
-      return;
-    }
-    toast.classList.toggle('visible');
-  });
-
-  // Close toast on outside click
-  document.addEventListener('click', function(e) {
-    if (!toast.contains(e.target) && e.target !== btn) {
-      toast.classList.remove('visible');
-    }
-  });
-
-  // Copy link
-  if (copyBtn) {
-    copyBtn.addEventListener('click', function() {
-      navigator.clipboard.writeText(url).then(function() {
-        toast.classList.remove('visible');
-        badge.classList.add('visible');
-        setTimeout(function() { badge.classList.remove('visible'); }, 2500);
-      }).catch(function() {
-        // fallback
-        var ta = document.createElement('textarea');
-        ta.value = url;
-        document.body.appendChild(ta);
-        ta.select();
-        document.execCommand('copy');
-        document.body.removeChild(ta);
-        toast.classList.remove('visible');
-        badge.classList.add('visible');
-        setTimeout(function() { badge.classList.remove('visible'); }, 2500);
-      });
-    });
-  }
-})();
 
 
 /* =============================================
@@ -2423,34 +2207,6 @@ body, input, textarea, button, select {
 })();
 
 </script>
-
-
-<!-- ===== SHARE BUTTON ===== -->
-<button class="share-btn" id="share-btn" aria-label="Share profile">
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-</button>
-
-<div class="share-toast" id="share-toast">
-  <div class="share-toast-title">Share Profile</div>
-  <a href="https://www.linkedin.com/in/charlene-mae-galang-02054b115/" target="_blank" rel="noopener" class="share-option">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-    LinkedIn Profile
-  </a>
-  <a href="https://twitter.com/intent/tweet?text=Check%20out%20Charlene%20Mae%20Galang%27s%20portfolio%20%E2%80%94%20Revenue%20Manager%20%26%20Market%20Analyst&url=https%3A%2F%2Fchacha0513.github.io%2Fportfolio%2F" target="_blank" rel="noopener" class="share-option">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.7 5.5 4.3 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
-    Share on X
-  </a>
-  <a href="https://wa.me/?text=Check%20out%20Charlene%20Mae%20Galang%27s%20portfolio%20%E2%80%94%20Revenue%20Manager%20%26%20Market%20Analyst%3A%20https%3A%2F%2Fchacha0513.github.io%2Fportfolio%2F" target="_blank" rel="noopener" class="share-option">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-    WhatsApp
-  </a>
-  <button class="share-option" id="copy-link-btn">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-    Copy Link
-  </button>
-</div>
-
-<div class="copied-badge" id="copied-badge">✓ Link Copied!</div>
 
 </body>
 </html>
